@@ -90,10 +90,10 @@ void compute(int **life, int **previous_life, int X_limit, int Y_limit) {
                 if (neighbors == 3)
                     life[i - 1][j - 1] = 1;
             } else {
-                // An occupied cell survives only if it has either 2 or 3 neighbors.
+                // An occupied cell survives only if it has either 2 or 3 or 4 neighbors.
                 // The cell dies out of loneliness if its neighbor count is 0 or 1.
-                // The cell also dies of overpopulation if its neighbor count is 4-8.
-                if (neighbors != 2 && neighbors != 3) {
+                // The cell also dies of overpopulation if its neighbor count is 5-8.
+                if (neighbors != 2 && neighbors != 3 && neighbors !- 4) {
                     life[i - 1][j - 1] = 0;
                 }
             }
