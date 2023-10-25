@@ -4,7 +4,7 @@ CXX = g++
 CXXFLAGS = -std=c++11
 CUDA = nvcc
 CUDAFLAGS = -std=c++11 -O2 -Xcompiler "$(CXXFLAGS)"
-GENCODE=--generate-code arch=compute_80,code=sm_80
+GENCODE=--generate-code arch=compute_80,code=sm_80   # <<--- Correc this based on where you are compiling.
 
 TARGET = cell_auto_gpu
 
